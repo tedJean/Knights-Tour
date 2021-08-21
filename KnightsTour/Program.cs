@@ -11,10 +11,12 @@ namespace KnightsTour
     {
         static void Main(string[] args)
         {
+            
             int count = 1;
             int[] horizontal = { 2, 1, -1, -2, -2, -1, 1, 2 };
             int[] vertical = { -1, -2, -2, -1, 1, 2, 2, 1 };
-            int row = 0, column = 0, newRow = 0, newCol = 0; //to initialize the starting position of the knight
+            int row = 0, column = 0, newRow = 0, newCol = 0; /*to initialize the starting position of 
+            the knight*/
             Boolean end = false, range = true, possibility = false;
             //setting up 8 x 8 arrays
             int[,] board = new int[8,8];
@@ -188,7 +190,7 @@ namespace KnightsTour
                 {
                     for (int col = 0; col < board.GetLength(1); col++)
                     {
-                        WriteLine("%s%02d%s", "[", board[row2,col], "]");
+                        WriteLine($"[{board[row2,col]}]");
                     }
                     WriteLine("");
                 }
